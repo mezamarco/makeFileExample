@@ -1,16 +1,16 @@
-#include "message.h"
-
+#include "Message.h"
+#include <iostream>
 
 int main(){
   
   //Create out message object, then tell it to do a function.
 	
+  Message m;
 
-  Message theMessageObject;
-
-    
-  std::cout << "The message was: " << theMessageObject.communicateFunct << std::endl;
+  std::cout << "\nThe message is: ";
+  m.communicate();  
 	
+  return 0;  
 
 }
 

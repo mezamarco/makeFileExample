@@ -12,12 +12,22 @@
   To create the File Guard in the .h file use the following template:
 
 
-  #ifdef MESSAGE_H
+  #ifndef MESSAGE_H
   #define MESSAGE_H
 
   {Body}
 
   #endif
+
+
+
+Recall that in our .h files we only include the class, variables, and function prototypes
+Recall that in our .cpp files we define our protypes, 
+Make sure to state the class name before the default constructors and deconstructors
+And for functions use the following example:
+
+int Message::takeAction(int a);
+
 
 
 
@@ -47,8 +57,8 @@ main.o: main.cpp
 
 // g++ -c [fileName] will compile our file, but not physically create the target file
 
-message.o: main.cpp message.o
-	g++ -c main.cpp message.o
+message.o: main.cpp message.h
+	g++ -c main.cpp message.h
  
 
 //clean will remove the following files
